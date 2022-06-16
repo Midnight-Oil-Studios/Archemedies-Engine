@@ -8,10 +8,12 @@ add_subdirectory(external/glfw)
 
 target_include_directories(${PROJECT_NAME}
         PUBLIC external/glfw/include
+        PUBLIC external/glfw/deps/
         )
 
 target_link_directories(${PROJECT_NAME}
         PUBLIC external/glfw/src
+        PUBLIC external/glfw/deps/
         )
 
 target_link_libraries(${PROJECT_NAME} glfw)

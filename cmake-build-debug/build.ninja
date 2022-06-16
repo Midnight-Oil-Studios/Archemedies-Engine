@@ -52,7 +52,7 @@ build cmake_object_order_depends_target_archemedies-engine: phony || cmake_objec
 build CMakeFiles/archemedies-engine.dir/src/Application.cpp.o: CXX_COMPILER__archemedies-engine_Debug /Users/deondreenglish/Projects/Midnight-Oil-Studios/Archemedies-Engine/src/Application.cpp || cmake_object_order_depends_target_archemedies-engine
   DEP_FILE = CMakeFiles/archemedies-engine.dir/src/Application.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
-  INCLUDES = -I/Users/deondreenglish/Projects/Midnight-Oil-Studios/Archemedies-Engine/external/glfw/include
+  INCLUDES = -I/Users/deondreenglish/Projects/Midnight-Oil-Studios/Archemedies-Engine/external/glfw/include -I/Users/deondreenglish/Projects/Midnight-Oil-Studios/Archemedies-Engine/external/glfw/deps
   OBJECT_DIR = CMakeFiles/archemedies-engine.dir
   OBJECT_FILE_DIR = CMakeFiles/archemedies-engine.dir/src
 
@@ -66,8 +66,8 @@ build CMakeFiles/archemedies-engine.dir/src/Application.cpp.o: CXX_COMPILER__arc
 
 build archemedies-engine: CXX_EXECUTABLE_LINKER__archemedies-engine_Debug CMakeFiles/archemedies-engine.dir/src/Application.cpp.o | external/glfw/src/libglfw3.a || external/glfw/src/libglfw3.a
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
-  LINK_LIBRARIES = -Wl,-rpath,/Users/deondreenglish/Projects/Midnight-Oil-Studios/Archemedies-Engine/external/glfw/src  external/glfw/src/libglfw3.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation
-  LINK_PATH = -L/Users/deondreenglish/Projects/Midnight-Oil-Studios/Archemedies-Engine/external/glfw/src
+  LINK_LIBRARIES = -Wl,-rpath,/Users/deondreenglish/Projects/Midnight-Oil-Studios/Archemedies-Engine/external/glfw/src -Wl,-rpath,/Users/deondreenglish/Projects/Midnight-Oil-Studios/Archemedies-Engine/external/glfw/deps  external/glfw/src/libglfw3.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation
+  LINK_PATH = -L/Users/deondreenglish/Projects/Midnight-Oil-Studios/Archemedies-Engine/external/glfw/src   -L/Users/deondreenglish/Projects/Midnight-Oil-Studios/Archemedies-Engine/external/glfw/deps
   OBJECT_DIR = CMakeFiles/archemedies-engine.dir
   POST_BUILD = :
   PRE_LINK = :
